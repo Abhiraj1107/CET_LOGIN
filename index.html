@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validated Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h1 class="label">Student Login</h1>
+        <form class="login_form" action="home.html" method="post" name="form" onsubmit="return validated()">
+            <div class="font">Email or Phone</div>
+            <input autocomplete="off" type="text" name="email" id="email">
+            <div id="email_error">Please fill up your Email or Phone</div>
+            <div class="font font2">Password</div>
+            <input type="password" name="password" id="password">
+            <div id="pass_error">Please fill up your Password</div>
+            <button type="submit">Login</button>
+            <div class="forgot-password" onclick="showForgotPassword()">Forgot Password?</div>
+        </form>
+    </div>
+
+    <div class="container" id="forgotContainer" style="display: none;">
+        <h1 class="label">Forgot Password</h1>
+        <div class="forgot-message" id="forgotMessage" style="display: none;"></div>
+        <form class="login_form" onsubmit="return false;">
+            <button onclick="goBack()">Back</button>
+        </form>
+    </div>
+
+    <script src="valid.js"></script>
+</body>
+</html>
